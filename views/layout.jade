@@ -1,0 +1,80 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .navbar.navbar-default.navbar-fixed-top(style='background-color: white;')
+      .container(style='padding-left: 50px; padding-right:50px; ')
+        .navbar-header
+          a.navbar-brand(href='/' style='color: #C8002B; font-size: 35px; font-weight: bold;') Quora
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-main' aria-expanded='true')
+                span.sr-only-focusable
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+        #navbar-main.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/' style='font-size: 15px;'): span.glyphicon.glyphicon-list-alt &nbspHome
+            li
+              a(href='/answers/'): span.glyphicon.glyphicon-pencil &nbspAnswer
+            li
+              a(href='#'): span.glyphicon.glyphicon-bell &nbspNotifications
+
+          .navbar-form
+            .form-group
+              .input-group
+                span.input-group-addon(style='background-color: white;')
+                  i.glyphicon.glyphicon-search
+                input.form-control(placeholder='Search Quora' )
+            small &nbsp;
+            small &nbsp;
+            small &nbsp;
+            small &nbsp;
+            img(src='https://lh3.googleusercontent.com/-1Y8vIfwgnk4/WWh2wrdFHbI/AAAAAAAAAlo/ucZ_-3Hxn5UMm9rhB5PjjZYAZeY61kYqQCEwYBhgL/w139-h140-p/IMG_20170511_105206009.jpg').img-circle(style='width:30px; height:30px;')
+            small &nbsp;
+            small &nbsp;
+            small &nbsp;
+            small &nbsp;
+            button(type='button').btn.btn-primary Add Question
+
+
+
+
+
+
+
+
+    .container(style='padding-left: 50px; padding-right:50px; padding-top : 40px ')
+      .row
+        .col-xs-1
+          p Feeds
+        .col-xs-1
+          a(href='#') Edit
+
+      .row
+        .col-xs-2
+          hr
+      .row
+        .col-xs-2
+           block side-content
+        .col-xs-10
+          block main-content
+
+
+
+      footer
+        .row
+          .col-xs-12
+            small &copy, Rupak kumar 2018
+
+
+
+
+  script( src='/bootstrap/js/jquery-3.2.1.min.js')
+  script( src='/bootstrap/js/bootstrap.min.js')
+
